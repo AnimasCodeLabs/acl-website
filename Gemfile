@@ -42,6 +42,9 @@ group :test do
   gem 'capybara'
 end
 
+gem 'thin'
+gem 'rails_12factor', group: :production
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
