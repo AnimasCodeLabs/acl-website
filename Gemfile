@@ -28,6 +28,7 @@ gem 'turbolinks'
 gem 'high_voltage'
 gem 'bourbon'
 gem 'neat'
+gem 'metamagic'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

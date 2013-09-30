@@ -59,6 +59,7 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    metamagic (2.0.5)
     mime-types (1.25)
     mini_portile (0.5.1)
     minitest (4.7.5)
@@ -151,6 +152,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   high_voltage
   jquery-rails
+  metamagic
   neat
   pg
   rails (= 4.0.0)
