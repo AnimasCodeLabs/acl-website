@@ -16,19 +16,19 @@
   background-repeat: no-repeat;
 
   &.vallecito{
-    background-image: url('vallecito-chamber-iphone.jpg');
+    background-image: asset_url('vallecito-chamber-iphone.jpg');
 
     @include hide-text;
   }
 
   &.cob{
-    background-image: url('closeoutbike-ipad.jpg');
+    background-image: asset_url('closeoutbike-ipad.jpg');
 
     @include hide-text;
   }
 
   &.creeklife{
-    background-image: url('creeklife-logo.jpg');
+    background-image: asset_url('creeklife-logo.jpg');
 
     @include hide-text;
   }
