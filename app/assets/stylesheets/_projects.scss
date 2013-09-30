@@ -1,7 +1,6 @@
 .featured-projects{
   .container{
-    margin-top: 5em;
-    margin-bottom: 5em;
+    @include pad(5em default 5em default);
   }
 }
 .featured-projects .project{
@@ -13,15 +12,23 @@
   @include pad;
   padding-top: 0;
   padding-bottom: flex-grid(4);
+  background-size: cover;
+  background-repeat: no-repeat;
 
-  &.acl{
-    background-color: $red-color;
+  &.vallecito{
+    background-image: url('vallecito-chamber-iphone.jpg');
+
+    @include hide-text;
   }
 
   &.cob{
     background-image: url('closeoutbike-ipad.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+
+    @include hide-text;
+  }
+
+  &.creeklife{
+    background-image: url('creeklife-logo.jpg');
 
     @include hide-text;
   }

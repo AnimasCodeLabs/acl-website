@@ -16,6 +16,10 @@ h1, h2, h3, h4, h5, h6{
   font-family: $headline-font;
 }
 
+h1 {
+  text-transform: uppercase;
+}
+
 .container{
   @include outer-container;
 }
@@ -63,7 +67,6 @@ h1, h2, h3, h4, h5, h6{
 }
 
 .banner{
-  height: em(600);
   background-color: #EEEEEE;
 
   .hero{
@@ -89,10 +92,13 @@ h1, h2, h3, h4, h5, h6{
   }
 }
 
-.featured-project{
-  background-color: #3F5666;
-  min-height: 30em;
-  color: #fff;
+.contact-info{
+  border-top: 1px solid #e6e6e6;
+
+  .left, .right{
+    @include span-columns(6);
+    @include omega(2n);
+    @include pad;
+  }
+
 }
-
-
