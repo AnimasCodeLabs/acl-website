@@ -20,8 +20,24 @@ h1 {
   text-transform: uppercase;
 }
 
+nav{
+  ul{
+    margin: 0;
+    padding: 0;
+  }
+
+  li{
+    @include inline-block; 
+    margin: 0 1em;
+  }
+}
+
 .container{
   @include outer-container;
+}
+
+%subtle-top-border{
+  border-top: 1px solid #e6e6e6;
 }
 
 
@@ -53,16 +69,17 @@ h1 {
 
 }
 
-#site-nav{
 
-  ul{
-    margin: 0;
-    padding: 0;
+#site-footer{
+  .container{ @include pad; }
+
+  @extend %subtle-top-border;
+
+  .copyright{
+    float: left;
   }
-
-  li{
-    @include inline-block; 
-    margin: 0 1em;
+  .site-footer-nav{
+    float: right;
   }
 }
 
@@ -93,12 +110,17 @@ h1 {
 }
 
 .contact-info{
-  border-top: 1px solid #e6e6e6;
+  @extend %subtle-top-border;
 
   .left, .right{
     @include span-columns(6);
     @include omega(2n);
-    @include pad;
+    @include pad(4em default 4em default);
+  }
+
+  p{
+    color: $marketing-text-color;
+    font-size: 1.25em;
   }
 
 }
