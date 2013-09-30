@@ -111,11 +111,13 @@ nav{
 
 .contact-info{
   @extend %subtle-top-border;
+  .container{
+    @include pad(4em default 4em default);
+  }
 
   .left, .right{
     @include span-columns(6);
     @include omega(2n);
-    @include pad(4em default 4em default);
   }
 
   p{
