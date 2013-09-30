@@ -1,0 +1,20 @@
+.featured-projects{
+  .container{
+    margin-top: 5em;
+    margin-bottom: 5em;
+  }
+}
+.featured-projects .project{
+  // @include inline-block;
+  @include span-columns(4);
+  @include omega(3n);
+
+  height: 0;
+  @include pad;
+  padding-bottom: flex-grid(4);
+
+  &.acl{
+    background-color: $red-color;
+  }
+}
+

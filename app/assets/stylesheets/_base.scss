@@ -2,6 +2,7 @@ $headline-font: 'Montserrat', $helvetica;
 $body-font: 'Pontano Sans', $helvetica;
 $headline-color: #2f3440;
 $marketing-text-color: #888888;
+$red-color: #ea6045;
 
 body{
   font-family: $body-font;
@@ -9,6 +10,14 @@ body{
 
 img{
   max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: $headline-font;
+}
+
+.container{
+  @include outer-container;
 }
 
 
@@ -67,7 +76,6 @@ img{
 
 
     h1{
-      font-family: $headline-font;
       font-size: 5em;
       text-shadow: 0 1px 1px #000;
       color: $headline-color;
@@ -87,7 +95,4 @@ img{
   color: #fff;
 }
 
-.content{
-  @include outer-container;
-}
 
