@@ -1,0 +1,78 @@
+$headline-font: 'Montserrat', $helvetica;
+$body-font: 'Potano Sans', $helvetica;
+
+body{
+  font-family: $body-font;
+}
+
+img{
+  max-width: 100%;
+}
+
+
+#site-header{
+  box-shadow: 0 0 10px #E0E0E0;
+  padding: 1em;
+  position: relative;
+  @include clearfix;
+
+  .logo{
+    height: 4em; 
+    float: left;
+  }
+
+  #site-nav{
+    float: right;
+  }
+
+}
+
+#site-nav{
+  ul{
+    margin: 0;
+    padding: 0;
+  }
+
+  li{
+    @include inline-block; 
+  }
+}
+
+.banner{
+  height: em(600);
+  background-color: #EEEEEE;
+  // background-image: url("mountain-stream.jpg");
+  // background-size: cover;
+  // background-position: top center;
+  // background-repeat: no-repeat;
+
+  .hero{
+    font-family: $headline-font;
+    text-align: center;
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100%;
+
+    text-shadow: 0 1px 1px #000;
+    color: #fbca4d;
+
+    h1{
+      display: table-cell;
+      vertical-align: middle;
+      font-size: 5em;
+      // line-height: 200%;
+    }
+  }
+}
+
+.featured-project{
+  background-color: #3F5666;
+  min-height: 30em;
+  color: #fff;
+}
+
+.content{
+  @include outer-container;
+}
+

@@ -2,11 +2,21 @@
 <html>
 <head>
   <title>Animas Code Labs</title>
+  <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Montserrat|Potano+Sans' %>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header id="site-header">
+    <%= image_tag "logo_acl.png", alt: "Animas Code Labs", class: "logo" %>   
+    <nav id="site-nav">
+      <ul>
+        <li>Home</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+  </header>
 
 <%= yield %>
 
