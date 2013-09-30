@@ -14,6 +14,11 @@
   padding-bottom: flex-grid(4);
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+
+  a{
+    @include position(absolute, 0px 0px 0px 0px);
+  }
 
   &.vallecito{
     background-image: asset_url('vallecito-chamber-iphone.jpg');

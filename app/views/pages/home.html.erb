@@ -15,13 +15,19 @@
 <section class="featured-projects">
   <div class="container">
     <section class="project cob">
-      <h1>Closeout Bike</h1>
+      <%= link_to "http://closeoutbike.com", target: "_blank" do %>
+        <h1>Closeout Bike</h1>
+      <% end %>
     </section>
     <section class="project vallecito">
-      <h1>Vallecito Lake Chamber of Commerce</h1>
+      <%= link_to "http://vallecitolakechamber.com", target: "_blank" do %>
+        <h1>Vallecito Lake Chamber of Commerce</h1>
+      <% end %>
     </section>
     <section class="project creeklife">
-      <h1>Creeklife</h1>
+      <%= link_to "http://creeklife.com", target: "_blank" do %>
+        <h1>Creeklife</h1>
+      <% end %>
     </section>
   </div>
 </section>
@@ -29,12 +35,12 @@
 
 <section class="contact-info">
   <div class="container">
-  <div class="left">
-    <h1>Let's Work Together</h1>
-    <p>Contact us or call us at (970) 403-5085 to begin the conversation.</p>
+    <div class="left">
+      <h1>Let's Work Together</h1>
+      <p>Contact us or call us at (970) 403-5085 to begin the conversation.</p>
+    </div>
+    <div class="right">
+      <%= image_tag 'durango-map.jpg', alt: 'Made in Durango, Colorado' %>
+    </div>
   </div>
-  <div class="right">
-    <%= image_tag 'durango-map.jpg', alt: 'Made in Durango, Colorado' %>
-  </div>
-</div>
 </section>
