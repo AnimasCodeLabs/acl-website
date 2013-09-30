@@ -11,10 +11,19 @@
 
   height: 0;
   @include pad;
+  padding-top: 0;
   padding-bottom: flex-grid(4);
 
   &.acl{
     background-color: $red-color;
+  }
+
+  &.cob{
+    background-image: url('closeoutbike-ipad.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include hide-text;
   }
 }
 
