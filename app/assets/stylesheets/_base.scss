@@ -1,5 +1,7 @@
 $headline-font: 'Montserrat', $helvetica;
-$body-font: 'Potano Sans', $helvetica;
+$body-font: 'Pontano Sans', $helvetica;
+$headline-color: #2f3440;
+$marketing-text-color: #888888;
 
 body{
   font-family: $body-font;
@@ -21,13 +23,25 @@ img{
     float: left;
   }
 
+
+  // From http://css-tricks.com/centering-in-the-unknown/
   #site-nav{
     float: right;
+
+    &:before{
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align:middle;
+      margin-right: -0.25em; /* Adjusts for spacing */
+    }
+
   }
 
 }
 
 #site-nav{
+
   ul{
     margin: 0;
     padding: 0;
@@ -35,33 +49,34 @@ img{
 
   li{
     @include inline-block; 
+    margin: 0 1em;
   }
 }
 
 .banner{
   height: em(600);
   background-color: #EEEEEE;
-  // background-image: url("mountain-stream.jpg");
-  // background-size: cover;
-  // background-position: top center;
-  // background-repeat: no-repeat;
 
   .hero{
-    font-family: $headline-font;
+
+    display: inline-block;
     text-align: center;
-    display: table;
     margin-right: auto;
     margin-left: auto;
     height: 100%;
 
-    text-shadow: 0 1px 1px #000;
-    color: #fbca4d;
 
     h1{
-      display: table-cell;
-      vertical-align: middle;
+      font-family: $headline-font;
       font-size: 5em;
-      // line-height: 200%;
+      text-shadow: 0 1px 1px #000;
+      color: $headline-color;
+      text-transform: uppercase;
+    }
+
+    p{
+      color: $marketing-text-color;
+      font-size: 2em;
     }
   }
 }
