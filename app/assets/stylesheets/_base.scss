@@ -32,6 +32,15 @@ nav{
   }
 }
 
+a, a:visited{
+ color: $headline-color; 
+ text-decoration: none;
+}
+
+a:hover{
+  color: $red-color;
+}
+
 .container{
   @include outer-container;
 }

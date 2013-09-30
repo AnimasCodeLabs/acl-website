@@ -10,11 +10,13 @@
   <body>
     <header id="site-header">
       <div class="container">
-        <%= image_tag "logo_acl.png", alt: "Animas Code Labs", class: "logo" %>   
+        <%= link_to root_path do %>
+          <%= image_tag "logo_acl.png", alt: "Animas Code Labs", class: "logo" %>   
+        <% end %>
         <nav id="site-nav">
           <ul>
-            <li>Home</li>
-            <li>Contact</li>
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Contact", "#contact" %></li>
           </ul>
         </nav>
       </div>
@@ -29,8 +31,8 @@
         </div>
         <nav class="site-footer-nav">
           <ul>
-            <li>Home</li>
-            <li>Contact</li>
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Contact", "#contact" %></li>
           </ul>
         </nav>
       </div>
