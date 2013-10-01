@@ -10,9 +10,11 @@
   <body>
     <header id="site-header">
       <div class="container">
-        <%= link_to root_path do %>
-          <%= image_tag "logo_acl.png", alt: "Animas Code Labs", class: "logo" %>   
-        <% end %>
+        <div class="logo">
+          <%= link_to root_path do %>
+            <h1>Animas Code Labs</h1>
+          <% end %>
+        </div>
         <nav id="site-nav">
           <ul>
             <li><%= link_to "Home", root_path %></li>
@@ -43,8 +45,8 @@
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-44483329-1', 'animascodelabs.com');
-        ga('send', 'pageview');
+ga('create', 'UA-44483329-1', 'animascodelabs.com');
+ga('send', 'pageview');
       </script>
     <% end %>
 

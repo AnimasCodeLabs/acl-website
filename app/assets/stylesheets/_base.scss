@@ -18,6 +18,14 @@ h1, h2, h3, h4, h5, h6{
 
 h1 {
   text-transform: uppercase;
+  font-size: em(42);
+  line-height: percentage(50/42);
+  color: $headline-color;
+}
+
+p{
+  color: $marketing-text-color;
+  font-size: em(18);
 }
 
 nav{
@@ -33,8 +41,8 @@ nav{
 }
 
 a, a:visited{
- color: $headline-color; 
- text-decoration: none;
+  color: $headline-color; 
+  text-decoration: none;
 }
 
 a:hover{
@@ -56,9 +64,28 @@ a:hover{
   position: relative;
   @include clearfix;
 
+  .container{
+    @include pad(0 default 0 default);
+  }
+
   .logo{
-    height: 4em; 
     float: left;
+    max-width: 169px;
+    width: 100%;
+
+    h1{
+      @include hide-text;
+    }
+
+    a{
+      width: 100%;
+      height: 100%;
+      @include retina-image(acl_logo, 169px 57px);
+      background-repeat: no-repeat;
+      padding-top: percentage(57/169);
+      display:inline-block;
+      background-size: 100%;
+    }
   }
 
 
@@ -95,27 +122,40 @@ a:hover{
 .banner{
   background-color: #EEEEEE;
 
+  .container{
+    text-align: center;
+    height: em(400);
+
+    // Vertical center from here http://css-tricks.com/centering-in-the-unknown/
+    &:before{
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align:middle;
+      margin-right: -0.25em; /* Adjusts for spacing */
+
+      // background: #808080; width: 5px;
+    }
+  }
+
   .hero{
 
+
     display: inline-block;
+    vertical-align: middle;
     text-align: center;
     margin-right: auto;
     margin-left: auto;
-    height: 100%;
-
 
     h1{
-      font-size: 5em;
-      text-shadow: 0 1px 1px #000;
-      color: $headline-color;
-      text-transform: uppercase;
+      margin:0;
     }
-
-    p{
-      color: $marketing-text-color;
-      font-size: 2em;
+    .separator{
+      font-size: em(42);
+      line-height: percentage(50/42);
     }
   }
+
 }
 
 .contact-info{
@@ -131,7 +171,6 @@ a:hover{
 
   p{
     color: $marketing-text-color;
-    font-size: 1.25em;
   }
 
 }
