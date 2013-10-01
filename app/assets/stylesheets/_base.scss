@@ -174,3 +174,19 @@ a:hover{
   }
 
 }
+
+
+.durango-map{
+  @include retina-image( map_footer, cover);
+  display: block;
+  width: 100%;
+  max-width: 376px;
+
+  .inner{
+    display: block;
+    padding-top: percentage(198/376);
+    height: 0;
+  }
+
+
+}
