@@ -8,6 +8,11 @@
   @include span-columns(4);
   @include omega(3n);
 
+  @include media($break-narrow){
+    @include span-columns(12);
+    @include omega;
+  }
+
   height: 0;
   @include pad;
   padding-top: 0;
