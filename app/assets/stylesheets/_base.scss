@@ -77,7 +77,7 @@ a:hover{
 
 
     a{
-      @include retina-image(acl_logo,cover);
+      @include retina-image(acl_logo,cover, $asset-pipeline: true);
       background-repeat: no-repeat;
       display:block;
       background-size: 100%;
@@ -185,7 +185,7 @@ a:hover{
 
 
 .durango-map{
-  @include retina-image( map_footer, cover);
+  @include retina-image( map_footer, cover, $asset-pipeline: true);
   display: block;
   width: 100%;
   max-width: 376px;
