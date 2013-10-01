@@ -139,6 +139,11 @@ a:hover{
 
       // background: #808080; width: 5px;
     }
+
+  }
+
+  &.small .container{
+    height: em(200);
   }
 
   .hero{
