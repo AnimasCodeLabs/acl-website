@@ -12,4 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require underscore
+//= require backbone
+//= require ./contact_app/contact_app
+//= require_tree ./contact_app/models
+//= require_tree ./contact_app/views
 //= require_tree .
