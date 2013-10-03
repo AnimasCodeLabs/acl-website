@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require Placeholders.min
 //= require underscore
 //= require backbone
 //= require ./contact_app/contact_app
