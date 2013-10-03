@@ -5,6 +5,7 @@ class ContactApp.Views.ContactForm extends Backbone.View
       <textarea id="message_body" class="body" name="message[body]" placeholder="Tell us about your project, or just drop us a line."></textarea>
 
       <input type="submit" value="LET\'S GET STARTED" />
+      <p class="alt-contact">Or call us at (970) 403-5085.</p>
     </form>
     ')
 

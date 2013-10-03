@@ -30,6 +30,15 @@ p{
   font-size: em(18);
 }
 
+a, a:visited{
+  color: $red-color; 
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+
 nav{
   ul{
     margin: 0;
@@ -40,16 +49,16 @@ nav{
     @include inline-block; 
     margin: 0 1em;
   }
+  a, a:visited{
+    color: $headline-color; 
+    text-decoration: none;
+  }
+
+  a:hover{
+    color: $red-color;
+  }
 }
 
-a, a:visited{
-  color: $headline-color; 
-  text-decoration: none;
-}
-
-a:hover{
-  color: $red-color;
-}
 
 input.error, textarea.error{
   border: 1px solid red;
