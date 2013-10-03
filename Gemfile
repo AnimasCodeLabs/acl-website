@@ -37,10 +37,13 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
+  gem 'factory_girl_rails'
+  gem 'pry-byebug'
 end
 
 group :test do
   gem 'capybara'
+  gem 'shoulda-matchers'
 end
 
 gem 'thin'
