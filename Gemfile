@@ -46,6 +46,12 @@ group :test do
   gem 'capybara'
   gem 'capybara-webkit'
   gem 'shoulda-matchers'
+  gem 'database_cleaner'
+  gem 'email_spec'
+end
+
+group :development do
+  gem "mail_view", "~> 1.0.3"
 end
 
 gem 'thin'

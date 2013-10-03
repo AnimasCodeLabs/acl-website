@@ -10,6 +10,12 @@ feature 'contact form' do
 
     click_button 'GET STARTED'
 
+    user_sees_thank_you_message
+
+    expect(last_email).to deliver_to("sales@animascodelabs.com")
+  end
+
+  def user_sees_thank_you_message
     expect(page).to have_content("Thank you")
   end
 end

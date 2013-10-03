@@ -5,5 +5,10 @@ AclWebsite::Application.routes.draw do
   resources :messages, only: [:create, :show], format: :json
 
   get '/contact' => 'high_voltage/pages#show', id: 'contact', as: :contact
+
+  if Rails.env.development?
+    mount MailPreview => 'mail_view'
+  end
+
   root to: 'high_voltage/pages#show', id: 'home'
 end

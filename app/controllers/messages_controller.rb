@@ -2,7 +2,12 @@ class MessagesController < ApplicationController
   respond_to :json
 
   def create
-    respond_with Message.create(message_params)
+    message = Message.create(message_params)
+    if message.persisted?
+      MessageMailer.new_message(message).deliver
+    end
+
+    respond_with message
   end
 
   private
