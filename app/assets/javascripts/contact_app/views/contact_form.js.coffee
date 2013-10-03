@@ -1,8 +1,8 @@
 class ContactApp.Views.ContactForm extends Backbone.View
   template: _.template('<form class="contact-app">
-      <input class="name" name="message[name]" type="text" placeholder="Your Name" />
-      <input class="email" name="message[email]"type="email" placeholder="Your Email" />
-      <textarea class="body" name="message[body]" placeholder="Tell us about your project, or just drop us a line."></textarea>
+      <input id="message_name" class="name" name="message[name]" type="text" placeholder="Your Name" />
+      <input id="message_email" class="email" name="message[email]"type="email" placeholder="Your Email" />
+      <textarea id="message_body" class="body" name="message[body]" placeholder="Tell us about your project, or just drop us a line."></textarea>
 
       <input type="submit" value="LET\'S GET STARTED" />
     </form>

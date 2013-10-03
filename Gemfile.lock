@@ -45,6 +45,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    capybara-webkit (1.0.0)
+      capybara (~> 2.0, >= 2.0.2)
+      json
     coderay (1.0.9)
     coffee-rails (4.0.0)
       coffee-script (>= 2.2.0)
@@ -181,6 +184,7 @@ DEPENDENCIES
   backbone-on-rails
   bourbon
   capybara
+  capybara-webkit
   coffee-rails (~> 4.0.0)
   factory_girl_rails
   high_voltage
