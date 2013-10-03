@@ -4,7 +4,7 @@ class ContactApp.Views.ContactForm extends Backbone.View
       <input class="email" name="message[email]"type="email" placeholder="Your Email" />
       <textarea class="body" name="message[body]" placeholder="Tell us about your project, or just drop us a line."></textarea>
 
-      <input type="submit" value="Send us a message" />
+      <input type="submit" value="LET\'S GET STARTED" />
     </form>
     ')
 

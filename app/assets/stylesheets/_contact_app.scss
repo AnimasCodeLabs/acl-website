@@ -1,0 +1,40 @@
+.contact-form .container{
+  @include pad;
+}
+
+.contact-app{
+  input, textarea{
+    font-family: $body-font;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    padding: .5em;
+    border: 1px solid #cccccc;
+  }
+
+
+  .name, .email{
+    @include span-columns(6);
+    @include omega(2n);
+
+
+  }
+
+  .body{
+    @include span-columns(12);
+    @include omega;
+    height: 10em;
+  }
+
+  input[type=submit]{
+    @include span-columns(12);
+    @include omega;
+    @include button(shiny,#3f5666);
+    font-family: $headline-font;
+    font-weight: normal;
+  }
+
+  .error{
+    border: 1px solid red;
+  }
+  
+}
