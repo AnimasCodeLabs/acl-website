@@ -14,15 +14,22 @@
     border: 1px solid #cccccc;
   }
 
+  .name{
+    @include span-columns(12);
+    @include omega;
+  }
 
-  .name, .email{
+  .phone, .email{
     @include span-columns(6);
-    @include omega(2n);
 
     @include media($break-narrow){
       @include span-columns(12);
       @include omega;
     }
+  }
+
+  .phone{
+    @include omega;
   }
 
   .body{

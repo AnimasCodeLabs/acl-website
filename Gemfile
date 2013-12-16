@@ -53,6 +53,7 @@ end
 
 group :development do
   gem "mail_view", "~> 1.0.3"
+  gem "letter_opener"
 end
 
 gem 'thin'

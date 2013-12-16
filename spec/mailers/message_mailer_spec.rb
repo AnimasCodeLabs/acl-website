@@ -15,4 +15,8 @@ describe MessageMailer, "#new_message" do
   it "sets the reply to message.email" do
     expect(email).to have_reply_to(message.email)
   end
+
+  it "sets the phone number" do
+    expect(email).to have_body_text(message.phone)
+  end
 end

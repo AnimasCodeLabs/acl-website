@@ -14,6 +14,7 @@ feature 'contact form' do
   def fill_out_contact_form
     fill_in 'message_name', with:  'John Doe'
     fill_in 'message_email', with: 'jdoe@example.com'
+    fill_in 'message_phone', with: '970-403-5085'
     fill_in 'message_body', with: 'Hello World'
 
     click_button 'GET STARTED'

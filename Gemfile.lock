@@ -88,6 +88,8 @@ GEM
     json (1.8.0)
     launchy (2.3.0)
       addressable (~> 2.3)
+    letter_opener (1.1.2)
+      launchy (~> 2.2)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -201,6 +203,7 @@ DEPENDENCIES
   factory_girl_rails
   high_voltage
   jquery-rails
+  letter_opener
   mail_view (~> 1.0.3)
   metamagic
   neat

@@ -1,7 +1,8 @@
 class ContactApp.Views.ContactForm extends Backbone.View
   template: _.template('<form class="contact-app">
       <input id="message_name" class="name" name="message[name]" type="text" placeholder="Your Name" />
-      <input id="message_email" class="email" name="message[email]"type="email" placeholder="Your Email" />
+      <input id="message_email" class="email" name="message[email]" type="email" placeholder="Your Email" />
+      <input id="message_phone" class="phone" name="message[phone]" type="tel" placeholder="Your Phone Number" />
       <textarea id="message_body" class="body" name="message[body]" placeholder="Tell us about your project, or just drop us a line."></textarea>
 
       <input type="submit" value="LET\'S GET STARTED" />
@@ -24,8 +25,9 @@ class ContactApp.Views.ContactForm extends Backbone.View
     e.preventDefault()
     newName = @.$('input[name=message\\[name\\]]').val()
     newEmail = @.$('input[name=message\\[email\\]]').val()
+    newPhone = @.$('input[name=message\\[phone\\]]').val()
     newBody = @.$('textarea[name=message\\[body\\]]').val()
-    @model.save( name: newName, email: newEmail, body: newBody)
+    @model.save( name: newName, email: newEmail, body: newBody, phone: newPhone)
 
   showErrors: (model, xhr, options) ->
     @hideErrors()
