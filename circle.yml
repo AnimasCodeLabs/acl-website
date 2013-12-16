@@ -2,6 +2,6 @@ deployment:
   production:
     branch: master
     commands:
-      - git push git@heroku.com:animascodelabs.git 
+      - git push git@heroku.com:animascodelabs.git $CIRCLE_SHA1:master
       - heroku run rake db:migrate --app animascodelabs
       - heroku restart --app animascodelabs
