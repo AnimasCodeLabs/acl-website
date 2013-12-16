@@ -1,0 +1,7 @@
+deployment:
+  production:
+    branch: master
+    commands:
+      - git push git@heroku.com:animascodelabs.git 
+      - heroku run rake db:migrate --app animascodelabs
+      - heroku restart --app animascodelabs
