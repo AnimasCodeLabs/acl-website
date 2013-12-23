@@ -1,0 +1,47 @@
+@include keyframes(fadeIn) {
+  from{
+    opacity: 0;
+  }
+
+  to{
+    opacity: 1;
+  }
+}
+
+.fade-in{
+  opacity: 0;
+  @include animation-name(fadeIn);
+  @include animation-duration(1s);
+  @include animation-fill-mode(forwards);
+}
+
+.animation{
+  &.one{
+    @include animation-delay(0.5s);
+  }
+
+  &.two{
+    @include animation-delay(1s);
+  }
+
+  &.three{
+    @include animation-delay(1.5s);
+  }
+}
+
+.home{
+  #site-header .logo{
+    @extend .fade-in;
+    @extend .animation.one;
+  }
+
+  .hero h1{
+    @extend .fade-in;
+    @extend .animation.two;
+  }
+
+  .hero .subtitle, nav#site-nav, .featured-projects, .contact-info, #site-footer{
+    @extend .fade-in;
+    @extend .animation.three;
+  }
+}
