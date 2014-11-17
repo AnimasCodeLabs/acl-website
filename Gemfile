@@ -31,6 +31,7 @@ gem 'bourbon'
 gem 'neat'
 gem 'metamagic'
 gem 'validates_email_format_of'
+gem 'flutie'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
