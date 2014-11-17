@@ -1,0 +1,11 @@
+#site-header{
+  height: 100px;
+
+  nav {
+    @extend %header-text;
+  }
+}
+
+#site-footer{
+  background-color: $dark-gray;
+}

@@ -1,0 +1,97 @@
+.pages-home {
+  %contact-section{
+    background-color: $yellow;
+    padding: 63px 0;
+    text-align: center;
+
+    h3{
+      color: white;
+      font-size: em(30);
+      margin-bottom: 26px;
+    }
+
+    .contact-link{
+      @extend %button-text;
+      border: 2px solid #A09455;
+      border-radius: $base-border-radius;
+      color: #3F5466;
+      display: inline-block;
+      font-size: em(22);
+      padding: 11px 32px;
+    }
+  }
+
+
+  .banner {
+    height: 650px;
+
+  }
+
+  .about-us {
+    text-align: center;
+    h2 {
+      color: $dark-gray-blue;
+      font-size: 30px;
+      line-height: 1.2;
+    }
+
+    p {
+      font-size: em(20);
+    }
+
+    hr {
+      margin: 0;
+    }
+  }
+
+  .services {
+    @include row;
+
+    .service-container {
+      @include span-columns(3);
+      @include omega(4n);
+
+      h4 {
+        color: $orange;
+        font-size: em(18);
+        line-height: 1.2;
+      }
+    }
+  }
+
+  .have-a-project-in-mind {
+    @extend %contact-section;
+  }
+
+  .featured-projects{
+    @include row();
+    .project{
+      @include span-columns(3);
+
+      background-color: $orange;
+      height: 320px;
+      margin: 0;
+      width: 25%;
+    }
+  }
+
+  .featured-case-study{
+    height: 650px;
+    background-color: $dark-gray;
+  }
+
+  .featured-clients{
+    height: 160px;
+  }
+
+  .building-great-apps{
+    @extend %contact-section;
+    background-color: $orange;
+
+    .contact-link{
+      color: $yellow;
+      border-color: #F29140;
+    }
+  }
+
+}
