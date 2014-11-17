@@ -1,11 +1,37 @@
-#site-header{
+#site-header {
   height: 100px;
+  padding: 0 30px;
+
+  .logo{
+    @include hide-text;
+    @include retina-image(header-logo, 150px 51px);
+    @include size(150px 51px);
+
+    float: left;
+    margin: ((100px - 51px)/2) 0;
+  }
 
   nav {
     @extend %header-text;
+    float: right;
+
+    li {
+      font-size: em(14);
+      display: inline-block;
+      line-height: 100px;
+
+      a {
+        color: $base-font-color;
+        margin-left: 17px;
+
+        &:hover{
+          color: $dark-gray;
+        }
+      }
+    }
   }
 }
 
-#site-footer{
+#site-footer {
   background-color: $dark-gray;
 }

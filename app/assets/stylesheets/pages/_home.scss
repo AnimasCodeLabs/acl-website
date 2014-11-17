@@ -25,10 +25,19 @@
   .banner {
     height: 650px;
 
+    background-image: image-url("main-banners/hackfest.jpg");
+    background-size: cover;
+    background-position: 50% 42%;
   }
 
   .about-us {
+    padding-top: 120px;
     text-align: center;
+
+    .about-us-wrapper{
+      display: inline-block;
+    }
+
     h2 {
       color: $dark-gray-blue;
       font-size: 30px;
@@ -39,8 +48,21 @@
       font-size: em(20);
     }
 
+    // Adapted from http://css-tricks.com/examples/hrs/
     hr {
-      margin: 0;
+      border-bottom: 1px solid $light-gray;
+      margin: 32px auto;
+      width: 95%;
+
+      &::after{
+        @include size(120px 22px);
+        content: "";
+        display: inline-block;
+        position: relative;
+        background-image: image-url('hr-diamonds.png');
+        background-color: white;
+        top: -11px;
+      }
     }
   }
 
