@@ -97,9 +97,60 @@
     }
   }
 
-  .featured-case-study{
-    height: 650px;
+  .featured-case-study {
+    @include row;
+
     background-color: $dark-gray;
+    background-image: image-url('featured-case-study/go-code-water-bottle.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 650px;
+
+    .case-study {
+      @include span-columns(5);
+      @include shift(7);
+      @include omega;
+      padding-top: 40px;
+
+      nav {
+        @extend %header-text;
+        font-size: 14px;
+
+        ul {
+          @include row;
+          margin-right: 30px;
+
+          li {
+            @include span-columns(3);
+
+            a {
+              color: $medium-gray;
+            }
+          }
+        }
+      }
+
+      .case-study-text {
+        margin-top: 135px;
+        margin-right: 120px;
+
+        h3 {
+          color: $orange;
+          font-size: 30px;
+        }
+
+        h4 {
+          color: white;
+          font-size: 30px;
+        }
+
+        p{
+          margin-top: 30px;
+          color: white;
+        }
+      }
+    }
   }
 
   .featured-clients{
