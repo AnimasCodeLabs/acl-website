@@ -32,27 +32,71 @@
     <%= yield %>
 
     <footer id="site-footer">
-      <div class="copyright">
-        Animas Code Labs &copy; <%= Date.today.year %>
-    </div>
-    <nav class="site-footer-nav">
-      <ul>
-        <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Blog","http://blog.animascodelabs.com" %></li>
-        <li><%= link_to "Contact", contact_path %></li>
-      </ul>
-    </nav>
-  </footer>
-  <% if Rails.env.production? %>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      <div class="top-row">
+        <div class="left">
+          <nav id="site-footer-nav">
+            <ul>
+              <li><%= link_to "Our Work", "#" %></li>
+              <li><%= link_to "Community", "#" %></li>
+              <li><%= link_to "Blog","http://blog.animascodelabs.com" %></li>
+              <li><%= link_to "Contact", contact_path %></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="center">
+          <i class="icon-mail"></i>
+          <%= mail_to "info@animascodelabs.com" %>
+        </div>
+
+        <div class="right">
+          <div class="phone">
+            <i class="icon-phone"></i>
+            <%= link_to "970.403.5085", "tel:1-970-403-5085" %>
+          </div>
+          <div class="social">
+            <span class="label">Social</span>
+            <ul>
+              <li>
+                <%= link_to "https://twitter.com/animascodelabs", class: "icon-twitter", "aria-label" => "Follow us on Twitter" do %>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to "https://www.facebook.com/AnimasCodeLabs", class: "icon-facebook", "aria-label" => "Friend us on Facebook" do %>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to "http://google.com/+animascodelabs", class: "icon-googleplus", "aria-label" => "Follow us on Google Plus" do %>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to "https://github.com/animascodelabs", class: "icon-github", "aria-label" => "Check out our code on Github" do %>
+                <% end %>
+              </li>
+              <li>
+                <%= link_to "https://www.linkedin.com/company/3506297", class: "icon-linkedin", "aria-label" => "Connect with us on LinkedIn" do %>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-row">
+        <div class="copyright">&copy; <%= Date.today.year %> Animas Code Labs. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <% if Rails.env.production? %>
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 ga('create', 'UA-44483329-1', 'animascodelabs.com');
 ga('send', 'pageview');
-    </script>
-  <% end %>
+      </script>
+    <% end %>
 
-</body>
+  </body>
 </html>
