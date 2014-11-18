@@ -4,7 +4,7 @@
 
   .logo{
     @include hide-text;
-    @include retina-image(header-logo, 150px 51px);
+    @include retina-image(header-logo, 150px 51px, $asset-pipeline: true);
     @include size(150px 51px);
 
     float: left;
