@@ -73,6 +73,12 @@
       @include span-columns(3);
       @include omega(4n);
 
+      .service-container-icon{
+        color: $dark-gray-blue;
+        font-size: 106px;
+        text-align: center;
+      }
+
       h4 {
         color: $orange;
         font-size: em(18);
