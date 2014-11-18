@@ -7,6 +7,6 @@ deployment:
       - heroku restart --app animascodelabs
     branch: v2
     commands:
-      - git push git@heroku.com:animascodelabs.git $CIRCLE_SHA1:master
+      - git push git@heroku.com:acl-next.git $CIRCLE_SHA1:master
       - heroku run rake db:migrate --app acl-next
       - heroku restart --app acl-next
