@@ -159,8 +159,22 @@
     }
   }
 
+  // See http://css-tricks.com/equidistant-objects-with-css/
   .featured-clients{
-    height: 160px;
+    text-align: justify;
+    font-size: 0.1px;
+    padding: 48px;
+
+    &:after{
+      content: '';
+      width: 100%;
+      display: inline-block;
+    }
+
+    .logo-wrap{
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
 
   .building-great-apps{
