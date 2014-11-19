@@ -13,3 +13,9 @@ $ cp config/database-example.yml config/database.yml
 $ rake db:setup db:test:prepare
 $ rake
 ````
+
+### Environment variables
+
+You can set the following environment variables
+
+    GA_TRACKING_ID=<Google analytics tracking id>
