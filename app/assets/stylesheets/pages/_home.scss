@@ -96,10 +96,34 @@
     .project{
       @include span-columns(3);
 
+      text-align: justify;
       background-color: $orange;
-      height: 320px;
       margin: 0;
       width: 25%;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      &:after{
+        padding-top: 100%;
+        display:  block;
+        content: '';
+      }
+
+      &.gopago{
+        background-image: image-url('featured-projects/gopago.jpg');
+      }
+
+      &.creeklife{
+        background-image: image-url('featured-projects/creek_life.jpg')
+      }
+
+      &.bike2020{
+        background-image: image-url('featured-projects/bike2020_mobile.jpg')
+      }
+
+      &.bizlink{
+        background-image: image-url('featured-projects/bizlink_desktop.jpg')
+      }
     }
   }
 
@@ -108,16 +132,22 @@
 
     background-color: $dark-gray;
     background-image: image-url('featured-case-study/go-code-water-bottle.jpg');
-    background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
-    height: 650px;
+    position: relative;
+
+    &:after{
+      padding-top: percentage(1365/2500);
+      display:  block;
+      content: '';
+    }
 
     .case-study {
       @include span-columns(5);
       @include shift(7);
       @include omega;
       padding-top: 40px;
+      position: absolute;
 
       nav {
         @extend %header-text;
