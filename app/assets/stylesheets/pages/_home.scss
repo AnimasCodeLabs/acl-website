@@ -28,6 +28,16 @@
     background-image: image-url("main-banners/hackfest.jpg");
     background-size: cover;
     background-position: 50% 42%;
+    position: relative;
+
+    .gradient{
+      @include linear-gradient(to left, rgba(#000000,0), rgba(#000000,1));
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
 
     //vertical centered text on banner from css-tricks
     &:before{
@@ -41,6 +51,8 @@
     .banner-text{
       display: inline-table;
       vertical-align: middle;
+      position: relative;
+      z-index: 50;
 
       .text{
         display: table-cell;
