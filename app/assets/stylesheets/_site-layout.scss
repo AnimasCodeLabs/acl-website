@@ -121,10 +121,9 @@
     }
 
     .brand-colorado-logo{
-      @include retina-image(footer/colorado-company-logo, 80px 80px, $asset-pipeline: true);
-      @include size(80px 80px);
+      @include retina-image(footer/colorado-company-logo, 100px 100px, $asset-pipeline: true);
+      @include size(100px 100px);
 
-      height: 80px;
       margin-top: 10px;
       margin-right: auto;
       margin-left: auto;
