@@ -98,7 +98,8 @@
         display: inline-table;
         position: absolute;
         bottom: 8%;
-        z-index: 100;
+        z-index: 50;
+        vertical-align: middle;
 
         .text{
           display: table-cell;
@@ -157,12 +158,11 @@
     .service-container {
       @include span-columns(3);
       @include omega(4n);
+      text-align: center;
 
       .service-container-icon{
         color: $dark-gray-blue;
         font-size: 106px;
-        text-align: center;
-
       }
 
       h4 {
