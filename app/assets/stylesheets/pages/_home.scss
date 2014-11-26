@@ -159,6 +159,11 @@
       @include span-columns(3);
       @include omega(4n);
       text-align: center;
+      padding-right: 10px;
+      padding-left: 10px;
+      padding-top: 60px;
+      padding-bottom: 70px;
+
 
       .service-container-icon{
         color: $dark-gray-blue;
