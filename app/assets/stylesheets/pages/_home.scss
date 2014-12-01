@@ -158,7 +158,7 @@
     .service-container {
       @include span-columns(3);
       @include omega(4n);
-      text-align: center;
+      text-align: left;
       padding-right: 10px;
       padding-left: 10px;
       padding-top: 60px;
@@ -168,6 +168,7 @@
       .service-container-icon{
         color: $dark-gray-blue;
         font-size: 106px;
+        text-align: center;
       }
 
       h4 {
