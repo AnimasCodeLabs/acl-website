@@ -69,10 +69,11 @@
     .center  {
       margin: 0 auto;
       display: inline-block;
+      margin-right: 350px;
 
       @include media($break-small)  {
         margin-top: 0px;
-        margin-right: 0px;
+        margin-right: none;
       }
     }
 
@@ -95,23 +96,30 @@
       }
     }
 
-    .email{
+    .email  {
       display: inline-block;
     }
 
-    .phone{
+    .phone  {
       display: inline-block;
+      position: absolute;
+      top: 30px;
+      right: 300px;
 
       @include media($break-small)  {
-        padding-top: 25px;
+        padding-top: 300px;
         display: block;
+        left: 0px;
+        right: 0px;
       }
     }
 
     .social {
       display: block;
-      float: right;
       margin-left: 0px;
+      position: absolute;
+      top: 30px;
+      right: 30px;
 
       @include media($break-small)  {
         display: block;
