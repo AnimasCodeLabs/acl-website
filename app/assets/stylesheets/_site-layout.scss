@@ -67,20 +67,25 @@
       color: $medium-gray;
     }
 
-    .center  {
+    .email  {
       margin: 0 auto;
       display: inline-block;
-      margin-right: 350px;
+
 
       @include media($break-small)  {
         margin-right: 0px;
         margin-bottom: 20px;
         display: block;
       }
+
+      @include media($break-large-xlarge) {
+        position: absolute;
+        right: 30px;
+      }
     }
 
     #site-footer-nav {
-      float: left;
+      position: absolute;
 
       li {
         display: inline-block;
@@ -88,9 +93,8 @@
       }
 
       @include media($break-small)  {
-        float: none;
         padding-bottom: 58px;
-
+        position: static;
 
         li  {
           display: block;
@@ -118,6 +122,10 @@
         display: block;
         position: static;
       }
+
+      @include media($break-large-xlarge) {
+        position: static;
+      }
     }
 
     .social {
@@ -127,24 +135,12 @@
       top: 30px;
       right: 30px;
 
-      @include media($break-small)  {
-        position: static;
-      }
-
       .label{
         margin-right: 10px;
-        @include media($break-small)  {
-          display: block;
-          padding-top: 30px;
-        }
       }
 
       ul,li {
         display: inline-block;
-
-        @include media($break-small)  {
-          padding-top: 16px;
-        }
       }
 
       ul{
@@ -159,6 +155,16 @@
 
         &:hover{
           color: white;
+        }
+      }
+
+      @include media($break-large-xlarge) {
+        position: static;
+
+        .label{
+          display: block;
+          margin-top: 30px;
+          margin-bottom: 16px;
         }
       }
     }

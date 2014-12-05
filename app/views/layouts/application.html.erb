@@ -33,18 +33,15 @@
 
     <footer id="site-footer">
       <div class="top-row">
-        <div class="left">
-          <nav id="site-footer-nav">
-            <ul>
-              <li><%= link_to "Our Work", "#" %></li>
-              <li><%= link_to "Community", "#" %></li>
-              <li><%= link_to "Blog","http://blog.animascodelabs.com" %></li>
-              <li><%= link_to "Contact", contact_path %></li>
-            </ul>
-          </nav>
-        </div>
-
-        <div class="center">
+        <nav id="site-footer-nav">
+          <ul>
+            <li><%= link_to "Our Work", "#" %></li>
+            <li><%= link_to "Community", "#" %></li>
+            <li><%= link_to "Blog","http://blog.animascodelabs.com" %></li>
+            <li><%= link_to "Contact", contact_path %></li>
+          </ul>
+        </nav>
+      <div class="email">
           <i class="icon-mail"></i>
           <%= mail_to "info@animascodelabs.com" %>
         </div>
