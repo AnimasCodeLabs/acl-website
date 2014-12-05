@@ -57,7 +57,11 @@
     .brand-colorado-logo{
       display: none;
 
-      @include media($break-small){
+      @include media($break-small)  {
+        display: block;
+      }
+
+      @include media($break-medium) {
         display: block;
         margin-top: 45px;
       }
@@ -92,8 +96,13 @@
         margin-right: 1em;
       }
 
+      @include media($break-medium) {
+        position: static;
+        margin-bottom: 30px;
+      }
+
       @include media($break-small)  {
-        padding-bottom: 58px;
+        padding-bottom: 30px;
         position: static;
 
         li  {
@@ -109,6 +118,12 @@
       @include media($break-small)  {
         position: static;
       }
+
+      @include media($break-medium) {
+        display: block;
+        position: static;
+        margin-bottom: 20px;
+      }
     }
 
     .phone  {
@@ -119,8 +134,12 @@
 
       @include media($break-small)  {
         padding-top: 0px;
-        display: block;
+        display: inline-block;
         position: static;
+      }
+
+      @include media($break-medium) {
+
       }
 
       @include media($break-large-xlarge) {
@@ -158,6 +177,10 @@
         }
       }
 
+      @include media($break-medium) {
+        position: static;
+      }
+
       @include media($break-large-xlarge) {
         position: static;
 
@@ -175,6 +198,12 @@
     border-top: 1px solid $medium-gray;
 
     @include media($break-small)  {
+      .brand-colorado-logo {
+        display: none;
+      }
+    }
+
+    @include media($break-medium)  {
       .brand-colorado-logo {
         display: none;
       }
