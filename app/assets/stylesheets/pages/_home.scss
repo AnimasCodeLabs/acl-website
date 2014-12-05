@@ -120,7 +120,6 @@
     }
   }
 
-
   .about-us {
     padding-top: 120px;
     text-align: center;
@@ -209,17 +208,14 @@
 
   .have-a-project-in-mind {
     @extend %contact-section;
+      text-align: center;
+      padding-left: 25px;
+      padding-right: 25px;
+      padding-top: 30px;
+      padding-bottom: 30px;
 
     @include media($break-small)  {
       font-size: 12px;
-    }
-
-    @include media($break-medium)  {
-      font-size: 14px;
-    }
-
-    @include media($break-medium-large)  {
-      font-size: 16px;
     }
   }
 
@@ -356,7 +352,10 @@
 
       .case-study-text {
         margin-top: 135px;
-        margin-right: 120px;
+        margin-right: 40px;
+        float: left;
+
+        padding-top: 40px;
 
         h3 {
           color: $orange;
@@ -380,7 +379,7 @@
   .featured-clients{
     text-align: justify;
     font-size: 0.1px;
-    padding: 48px;
+    padding: 20px;
 
     &:after{
       content: '';
@@ -394,35 +393,43 @@
     }
 
     @include media($break-large-medium)  {
-      margin-top: 20px;
-      margin-right: 120px;
-      margin-bottom: 20px;
-      margin-left: 120px;
       display: block;
-      padding-top: 0px;
-      padding-bottom: 0px;
+      text-align: center;
+
+      .logo-wrap {
+        margin: 20px;
+      }
     }
 
     @include media($break-small)  {
-      margin-top: 40px;
-      margin-right: 40px;
-      margin-bottom: 40px;
-      margin-left: 40px;
-      padding-top: 0px;
-      padding-bottom: 0px;
       display: block;
       text-align: center;
+
+      .logo-wrap {
+        display: block;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
     }
   }
 
   .building-great-apps{
     @extend %contact-section;
     background-color: $orange;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @include media($break-small)  {
+      font-size: 12px;
+    }
 
     .contact-link{
       color: $yellow;
       border-color: #F29140;
     }
   }
-
 }
