@@ -23,58 +23,63 @@
 
   .banner {
     color: white;
-    height: 650px;
 
+    .banner-picture{
+      background-repeat: no-repeat;
+      position: relative;
+      background-size: 100%;
+      background-position: auto;
 
-    // .hackfest-banner {
-    //   background-image: image-url("main-banners/hackfest.jpg");
-    //   background-size: cover;
-    //   background-position: 50% 42%;
-    //   position: relative;
-    //
-    //   .gradient{
-    //     @include linear-gradient(to left, rgba(#000000,0), rgba(#000000,1));
-    //     position: absolute;
-    //     top: 0;
-    //     bottom: 0;
-    //     left: 0;
-    //     right: 0;
-    //   }
-    //
-    //   //vertical centered text on banner from css-tricks
-    //   &:before{
-    //     content: '';
-    //     display: inline-block;
-    //     height: 100%;
-    //     vertical-align: middle;
-    //     margin-right: -0.25em;
-    //   }
-    //
-    //   .banner-text{
-    //     display: inline-table;
-    //     vertical-align: middle;
-    //     position: relative;
-    //     z-index: 50;
-    //
-    //     .text{
-    //       display: table-cell;
-    //       vertical-align: middle;
-    //     }
-    //
-    //     .bracket{
-    //       display: table-cell;
-    //       font-size: 180px;
-    //       vertical-align: middle;
-    //     }
-    //   }
-    // }
+      &:after{
+        padding-top: percentage(650/1280);
+        display:  block;
+        content: '';
+      }
+    }
+
+    .hackfest-banner {
+      background-image: image-url("main-banners/hackfest.jpg");
+      background-position: 50% 42%;
+
+      .gradient{
+        @include linear-gradient(to left, rgba(#000000,0), rgba(#000000,1));
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+
+      //vertical centered text on banner from css-tricks
+      &:before{
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -0.25em;
+      }
+
+      .banner-text{
+        display: inline-table;
+        vertical-align: middle;
+        position: absolute;
+        z-index: 50;
+
+        .text{
+          display: table-cell;
+          vertical-align: middle;
+        }
+
+        .bracket{
+          display: table-cell;
+          font-size: 180px;
+          vertical-align: middle;
+        }
+      }
+    }
 
     .acl-gocode-banner {
       background-image: image-url("main-banners/acl-gocode.jpg");
-      background-size: cover;
-      background-position: 50% 42%;
-      position: relative;
-      height: 650px;
 
       .gradient{
         background-color: rgb(237, 93, 54);
