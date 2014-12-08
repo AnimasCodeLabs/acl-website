@@ -19,6 +19,7 @@
       font-size: em(14);
       display: inline-block;
       line-height: 100px;
+      margin-left: 20px;
 
       a {
         color: $base-font-color;
@@ -37,6 +38,10 @@
 
   &, a {
     color: white;
+
+    @include media($break-small)  {
+      font-size: 14px;
+    }
   }
 
   .brand-colorado-logo{
