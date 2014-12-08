@@ -11,6 +11,10 @@
     margin: ((100px - 51px)/2) 0;
   }
 
+  .mobile-nav-toggle  {
+    display: none;
+  }
+
   nav {
     @extend %header-text;
     float: right;
@@ -29,6 +33,17 @@
           color: $dark-gray;
         }
       }
+    }
+  }
+
+  @include media($break-small-medium)  {
+    .mobile-nav-toggle  {
+      display: inline-block;
+      float: right;
+    }
+
+    nav {
+      display: none;
     }
   }
 }

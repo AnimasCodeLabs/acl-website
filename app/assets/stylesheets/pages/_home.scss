@@ -413,9 +413,24 @@
       padding-left: 100px;
       right: 0px;
 
+      .mobile-icon  {
+
+        @include media($break-small-medium)  {
+          position: absolute;
+        }
+
+        @include media($break-medium-small)  {
+          display: none;
+        }
+      }
+
       nav {
         @extend %header-text;
         font-size: 14px;
+
+        @include media($break-small-medium)  {
+          display: none;
+        }
 
         ul {
           @include row;
