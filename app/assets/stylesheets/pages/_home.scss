@@ -405,6 +405,10 @@
     position: relative;
     height: 650px;
 
+    .mobile-nav-toggle  {
+      display: none;
+    }
+
     .case-study {
       width: 100%;
       max-width: 700px;
@@ -413,16 +417,16 @@
       padding-left: 100px;
       right: 0px;
 
-      .mobile-icon  {
-
-        @include media($break-small-medium)  {
-          position: absolute;
-        }
-
-        @include media($break-medium-small)  {
-          display: none;
-        }
+    @include media($break-small-medium)  {
+      .mobile-nav-toggle  {
+        display: inline-block;
+        float: right;
       }
+
+      nav {
+        display: none;
+      }
+    }
 
       nav {
         @extend %header-text;

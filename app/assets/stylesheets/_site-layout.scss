@@ -1,23 +1,31 @@
 #site-header {
-  height: 100px;
   padding: 0 30px;
+  @include clearfix;
 
   .logo{
     @include hide-text;
     @include retina-image(header-logo, 150px 51px, $asset-pipeline: true);
     @include size(150px 51px);
 
-    float: left;
+    float: none;
     margin: ((100px - 51px)/2) 0;
   }
 
   .mobile-nav-toggle  {
     display: none;
+    font-size: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
   }
 
   nav {
     @extend %header-text;
-    float: right;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    display: block;
+    margin-top: 21px;
 
     li {
       font-size: em(14);
@@ -37,13 +45,28 @@
   }
 
   @include media($break-small-medium)  {
+    padding: 5px;
+    padding-left: 10px;
     .mobile-nav-toggle  {
       display: inline-block;
-      float: right;
+      float: none;
     }
 
     nav {
-      display: none;
+      position: static;
+      max-height: 0px;
+      overflow: hidden;
+      @include transition(all .5s ease-in-out);
+
+      li  {
+        display: block;
+        line-height: 50px;
+        margin-left: 0px;
+      }
+
+      &.active  {
+        max-height: 600px;
+      }
     }
   }
 }
