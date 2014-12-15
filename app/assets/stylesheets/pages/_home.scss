@@ -428,27 +428,27 @@
       }
     }
 
-      nav {
-        @extend %header-text;
-        font-size: 14px;
-
-        @include media($break-small-medium)  {
-          display: none;
-        }
-
-        ul {
-          @include row;
-          margin-right: 30px;
-
-          li {
-            @include span-columns(3);
-
-            a {
-              color: $medium-gray;
-            }
-          }
-        }
-      }
+      // nav {
+      //   @extend %header-text;
+      //   font-size: 14px;
+      //
+      //   @include media($break-small-medium)  {
+      //     display: none;
+      //   }
+      //
+      //   ul {
+      //     @include row;
+      //     margin-right: 30px;
+      //
+      //     li {
+      //       @include span-columns(3);
+      //
+      //       a {
+      //         color: $medium-gray;
+      //       }
+      //     }
+      //   }
+      // }
 
       .case-study-text {
         margin-top: 100px;
