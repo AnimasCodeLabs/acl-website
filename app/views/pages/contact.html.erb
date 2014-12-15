@@ -1,19 +1,89 @@
+<% content_for(:extra_body_classes, 'pages-contact') %>
+
 <% meta title: 'Contact Us | Animas Code Labs',
 description: "Hire Animas Code Labs as your web and mobile app developer" %>
 
-<section class="banner small">
-  <div class="container">
-    <div class="hero">
-      <h1>Interested in Hiring Us?</h1>
-    </div>
+<section class="banner">
+  <div class="hackfest-banner banner-picture">
+    <div class="gradient"></div>
+      <div class="banner-text-wrapper">
+        <div class="contact-text">
+          <h2>CONTACT US</h2>
+          <p>LET'S TAKE YOUR PROJECT TO NEW HEIGHTS</p>
+        </div>
+      </div>
   </div>
 </section>
 
-<section class="contact-form">
-  <div class="container">
-    <h2>Let's begin the conversation</h2>
-    <div id="contact-form"></div>
-  </div>
 
-  
+<section class="outer-container">
+  <section class="conversation">
+    <div class="conversation-text">
+      <article>
+        <h2>Let's begin the conversation</h2>
+        <p>Dolor ullamco elit non id sit adipisicing irure occaecat ex aliquip. Laborum cillum quis pariatur sint cupidatat
+          aute tempor aliquip magna cillum et. Velit aliquip labore ea fugiat sit cupidatat est et. Anim eiusmod quis
+          irure ipsum sit adipisicing reprehenderit commodo minim do veniam. Ex esse consequat magna adipisicing ut
+          sit proident tempor consectetur non. Enim aute eiusmod aliqua labore amet ad commodo consectetur reprehenderit
+          eu eiusmod non officia anim.
+        </p>
+      </article>
+      <aside>
+        <section class="email-phone-address">
+          <div class="email">
+            <i class="icon-mail"></i>
+            <%= mail_to "info@animascodelabs.com" %>
+          </div>
+          <div class="phone">
+            <i class="icon-phone"></i>
+            <%= link_to "970-403-5085", "tel:1-970-403-5085" %>
+          </div>
+          <div class="address">
+            367 Valley View Place
+            Bayfield, CO 81122
+          </div>
+        </section>
+      </aside>
+    </div>
+  </section>
+
+  <section class="contact-form">
+    <article>
+      <form action="">
+        <label for="GET-name">First Name:</label>
+        <input id="GET-name" type="text" name="First Name">
+      </form>
+    </article>
+
+    <aside>
+      <form action="" method="post">
+        <label for="POST-name">Last Name:</label>
+        <input id="POST-name" type="text" name="Last Name">
+      </form>
+    </aside>
+
+    <article>
+      <form action="">
+        <label for="GET-name">Email:</label>
+        <input id="GET-name" type="text" name="Email">
+      </form>
+    </article>
+
+    <aaside>
+      <form action="">
+        <label for="GET-name">Phone:</label>
+        <input id="GET-name" type="text" name="Phone">
+      </form>
+    </aside>
+
+      <form action="">
+        <label for="GET-name">Tell us about your project or just drop us a line.:</label>
+        <input id="GET-name" type="text" name="Tell us about your project or just drop us a line.">
+      </form>
+
+      <form action="">
+        <label for="GET-name">LET'S GET STARTED:</label>
+        <input id="GET-name" type="text" name="LET'S GET STARTED">
+      </form>
+  </section>
 </section>
