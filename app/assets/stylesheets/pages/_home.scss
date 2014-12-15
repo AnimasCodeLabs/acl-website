@@ -417,16 +417,16 @@
       padding-left: 100px;
       right: 0px;
 
-    @include media($break-small-medium)  {
-      .mobile-nav-toggle  {
-        display: inline-block;
-        float: right;
-      }
-
-      nav {
-        display: none;
-      }
-    }
+    // @include media($break-small-medium)  {
+    //   .mobile-nav-toggle  {
+    //     display: inline-block;
+    //     float: right;
+    //   }
+    //
+    //   nav {
+    //     display: none;
+    //   }
+    // }
 
       // nav {
       //   @extend %header-text;
