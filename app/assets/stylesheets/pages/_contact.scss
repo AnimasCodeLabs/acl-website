@@ -1,94 +1,103 @@
-.banner {
-  color: white;
+.pages-contact  {
 
-  .banner-picture{
-    background-repeat: no-repeat;
-    position: relative;
-    background-size: 100%;
-    background-position: auto;
+  .banner {
+    color: white;
 
-    &:after{
-      padding-top: percentage(650/1280);
-      display:  block;
-      content: '';
+    .banner-picture{
+      background-repeat: no-repeat;
+      position: relative;
+      background-size: 100%;
+      background-position: auto;
+      vertical-align: middle;
+
+      &:after{
+        padding-top: percentage(500/1280);
+        display:  block;
+        content: '';
+      }
+    }
+
+    .hackfest-banner {
+      background-image: image-url("contact-banner.jpg");
+      background-position: 50% 42%;
+
+      .banner-text-wrapper  {
+        text-align: center;
+
+        //vertical centered text on banner from css-tricks
+        &:before{
+          content: '';
+          display: inline-block;
+          height: 100%;
+          vertical-align: middle;
+        }
+      }
+
+      .contact-text{
+        display: inline-table;
+        vertical-align: middle;
+        position: relative;
+        z-index: 50;
+        font-size: 32px;
+
+        .text{
+          display: table-cell;
+          vertical-align: middle;
+          font-size: 40px;
+        }
+      }
     }
   }
 
-  .hackfest-banner {
-    background-image: image-url("contact-banner.jpg");
-    background-position: 50% 42%;
+  .outer-container  {
+    @include outer-container;
 
-    .banner-text-wrapper  {
-      text-align: center;
-
-      //vertical centered text on banner from css-tricks
-      &:before{
-        content: '';
-        display: inline-block;
-        height: 100%;
-        vertical-align: middle;
-      }
+    .conversation {
+      aside { @include span-columns(3); }
+      article { @include span-columns(9); }
 
       h2  {
-        padding-top: 90px;
+        padding-top: 125px;
+        color: #EA6045;
+        font-size: 40px;
+      }
 
+      p  {
+        padding-top: 30px;
+        font-size: 12px;
       }
     }
 
-    .contact-text{
-      display: inline-table;
-      vertical-align: middle;
-      position: relative;
-      z-index: 50;
-      font-size: 20px;
+    .email-phone-address  {
+      float: right;
+      margin-top: 190px;
+      padding-left: 30px;
 
-      .text{
-        display: table-cell;
-        vertical-align: middle;
+
+      .email, .phone, .address  {
+        padding-bottom: 20px;
+      }
+
+      [class^="icon-"], [class*=" icon-"]  {
+        color: #EA6045;
+        padding-right: 15px;
+      }
+
+      @include media ($break-medium-small)  {
       }
     }
-  }
-}
 
-.outer-container  {
-  @include outer-container;
-
-  .conversation {
-    aside { @include span-columns(3); }
-    article { @include span-columns(9); }
-
-    p  {
-      padding-top: 30px;
-    }
-  }
-
-  .email-phone-address  {
-    float: right;
-    margin-top: 60px;
-    padding-left: 30px;
-
-    .email  {
-      padding-bottom: 20px;
+    .contact-form  {
+      @include span-columns(9);
+      aside { @include span-columns(6); }
+      article { @include span-columns(6); }
+      @include omega(4n);
     }
 
-    .phone  {
-      padding-bottom: 20px;
-    }
-
-    .address  {
-      padding-bottom: 20px;
-    }
+    // .contact-form {
+    //   @include outer-container;
+    //   aside { @include span-columns(4.5); }
+    //   article { @include span-columns(4.5); }
+    // }
   }
-
-  .contact-form  {
-    @include span-columns(9);
-    aside { @include span-columns(6); }
-    article { @include span-columns(6); }
-  }
-
-  // .contact-form {
-  //   @include outer-container;
-  //   aside { @include span-columns(4.5); }
-  //   article { @include span-columns(4.5); }
-  // }
 }
