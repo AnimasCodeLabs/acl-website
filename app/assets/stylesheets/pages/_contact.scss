@@ -42,6 +42,30 @@
         display: inline-table;
         vertical-align: middle;
         font-size: 22px;
+
+        @include media($break-medium)  {
+          font-size: 18px;
+
+          h1 {
+            font-size: 36px;
+          }
+        }
+
+        @include media($break-small-medium)  {
+          font-size: 12px;
+
+          h1 {
+            font-size: 28px;
+          }
+        }
+
+        @include media($break-small)  {
+          font-size: 10px;
+
+          h1 {
+            font-size: 22px;
+          }
+        }
       }
     }
   }
@@ -53,10 +77,25 @@
       aside { @include span-columns(3); }
       article { @include span-columns(9); }
 
+      @include media($break-large-medium)  {
+        aside { @include span-columns(2); }
+        article { @include span-columns(12); }
+      }
+
       h2  {
         padding-top: 125px;
         color: #EA6045;
         font-size: 32px;
+
+        @include media($break-medium)  {
+          font-size: 28px;
+          padding-top: 50px;
+          text-align: center;
+
+          h1 {
+            font-size: 28px;
+          }
+        }
       }
 
       p  {
@@ -83,7 +122,6 @@
       }
 
       .phone  {
-
         @include media($break-large-xlarge)  {
           display: block;
           text-align: center;
@@ -113,6 +151,10 @@
       @include media($break-large-xlarge)  {
         display: inline-block;
       }
+
+      @include media($break-large-medium)  {
+        display: none;
+      }
     }
 
     .contact-form  {
@@ -120,17 +162,62 @@
       padding-bottom: 50px;
 
       .grid  {
-
         .field  {
           @include span-columns(6);
           @include omega(2n);
+
+          @include media($break-small-medium)  {
+            @include span-columns(12);
+          }
         }
+      }
+
+      .button  {
+        @include media($break-small-medium)  {
+          text-align: center;
+        }
+      }
+
+      @include media($break-large-medium)  {
+        @include span-columns(12);
+        @include omega(2n);
       }
     }
 
     @include media($break-large-xlarge)  {
       padding-left: 60px;
       padding-right: 40px;
+    }
+  }
+}
+
+.email-phone-address-bottom  {
+  display: none;
+
+  [class^="icon-"], [class*=" icon-"]  {
+    color: #EA6045;
+    padding-right: 15px;
+  }
+
+  @include media($break-large-medium)  {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    .address  {
+      display: inline-flex;
+    }
+  }
+  .email, .phone, .address  {
+    padding-bottom: 20px;
+
+    a {
+      color: gray;
+
+      .hover {
+        background-color: yellow;
+      }
     }
   }
 }
