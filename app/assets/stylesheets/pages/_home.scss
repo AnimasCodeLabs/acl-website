@@ -521,9 +521,20 @@
       font-size: 14px;
     }
 
+    h3{
+      color: white;
+      font-size: em(30);
+      margin-bottom: 26px;
+
+      @include media($break-small)  {
+        display: block;
+        font-size: 22px;
+      }
+    }
     .contact-link{
       color: $yellow;
       border-color: #F29140;
+      margin-left: 0px;
 
       @include media($break-small)  {
         display: block;

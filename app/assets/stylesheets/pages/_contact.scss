@@ -82,19 +82,80 @@
         }
       }
 
+      .phone  {
+
+        @include media($break-large-xlarge)  {
+          display: block;
+          text-align: center;
+        }
+      }
+
+      .address {
+        display: inline-flex;
+        vertical-align: top;
+
+        @include media($break-large-xlarge)  {
+          display: block;
+          text-align: center;
+        }
+      }
+
       [class^="icon-"], [class*=" icon-"]  {
         color: #EA6045;
         padding-right: 15px;
+
+        @include media($break-large-xlarge)  {
+          display: block;
+          text-align: center;
+        }
+      }
+
+      @include media($break-large-xlarge)  {
+        display: inline-block;
       }
     }
 
     .contact-form  {
       @include span-columns(9);
+      padding-bottom: 50px;
 
-      .field  {
-        @include span-columns(6);
-        @include omega(2n);
+      .grid  {
+
+        .field  {
+          @include span-columns(6);
+          @include omega(2n);
+        }
       }
+    }
+
+    @include media($break-large-xlarge)  {
+      padding-left: 60px;
+      padding-right: 40px;
+    }
+  }
+}
+
+.building-great-apps{
+  @extend %contact-section;
+  background-color: $orange;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 90px;
+  padding-bottom: 90px;
+
+  @include media($break-small)  {
+    font-size: 14px;
+  }
+
+  h3{
+    color: white;
+    font-size: em(30);
+    margin-bottom: 26px;
+    text-align: center;
+
+    @include media($break-small)  {
+      display: block;
+      font-size: 22px;
     }
   }
 }
