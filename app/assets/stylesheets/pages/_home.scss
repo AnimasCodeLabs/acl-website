@@ -397,11 +397,10 @@
 
   .featured-case-study {
     @include row;
-
     background-color: $dark-gray;
     background-image: image-url('featured-case-study/go-code-water-bottle.jpg');
     background-size: cover;
-    background-position: 63% 50%;
+    background-position: 83% 50%;
     position: relative;
     height: 650px;
 
@@ -411,10 +410,9 @@
 
     .case-study {
       width: 100%;
-      max-width: 700px;
-      padding-top: 40px;
+      max-width: 500px;
+      padding-left: 40px;
       position: absolute;
-      padding-left: 100px;
       right: 0px;
 
     // @include media($break-small-medium)  {

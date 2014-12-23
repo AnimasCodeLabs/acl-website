@@ -1,5 +1,4 @@
 .pages-contact  {
-
   .banner {
     color: white;
 
@@ -91,10 +90,7 @@
           font-size: 28px;
           padding-top: 50px;
           text-align: center;
-
-          h1 {
-            font-size: 28px;
-          }
+          padding-right: 20px;
         }
       }
 
@@ -185,8 +181,14 @@
     }
 
     @include media($break-large-xlarge)  {
-      padding-left: 60px;
+      padding-left: 40px;
       padding-right: 40px;
+    }
+
+    @include media($break-small)  {
+      font-size: 18px;
+      padding-left: 20px;
+      padding-right: 20px;
     }
   }
 }

@@ -257,6 +257,10 @@
     .copyright{
       font-size: 12px;
       margin-left: 20px;
+
+      @include media($break-medium)  {
+          text-align: center;
+      }
     }
   }
 }
