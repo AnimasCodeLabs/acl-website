@@ -310,6 +310,8 @@
         padding-bottom: 10px;
       }
 
+      p{ margin: 0;}
+
       @include media($break-large-xlarge) {
         @include span-columns(6);
         @include omega(2n);
@@ -320,29 +322,6 @@
         @include omega(1n);
         padding-top: 5px;
         font-size: 16px;
-
-      @include media($break-tablet) {
-        @include span-columns(6);
-        @include omega(2n);
-      }
-
-        h4 {
-          color: $orange;
-          font-size: em(18);
-          line-height: 1.2;
-          text-align: left;
-
-          @include media($break-small)  {
-
-            font-size: 18px;
-          }
-        }
-
-        .service-container-icon{
-          color: $dark-gray-blue;
-          font-size: 106px;
-          text-align: center;
-        }
       }
     }
   }
