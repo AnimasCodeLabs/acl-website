@@ -45,6 +45,7 @@ GEM
     bourbon (3.2.3)
       sass (~> 3.2)
       thor
+    bower (0.0.2)
     builder (3.2.2)
     byebug (2.7.0)
       columnize (~> 0.3)
@@ -391,6 +392,7 @@ PLATFORMS
 DEPENDENCIES
   backbone-on-rails
   bourbon
+  bower
   capybara
   capybara-webkit
   coffee-rails (~> 4.0.0)
