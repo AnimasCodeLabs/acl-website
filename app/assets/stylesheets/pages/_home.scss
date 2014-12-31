@@ -287,15 +287,19 @@
     @include row;
     padding-left: 10px;
     padding-right: 10px;
+    padding-bottom: 40px;
 
     .service-container {
-      @include span-columns(3);
-      @include omega(4n);
-      text-align: left;
+      display: inline-block;
+      margin-right: -0.25em;
+      vertical-align: top;
+      width: 25%;
+
+
       padding-right: 20px;
       padding-left: 20px;
-      padding-top: 60px;
-      padding-bottom: 70px;
+      margin-top: 30px;
+      margin-bottom: 30px;
 
       .service-container-icon{
         color: $dark-gray-blue;
@@ -313,13 +317,12 @@
       p{ margin: 0;}
 
       @include media($break-large-xlarge) {
-        @include span-columns(6);
-        @include omega(2n);
+        width: 50%;
       }
 
+
       @include media($break-small)  {
-        @include span-columns(12);
-        @include omega(1n);
+        width: 100%;
         padding-top: 5px;
         font-size: 16px;
       }
