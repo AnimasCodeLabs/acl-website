@@ -39,8 +39,7 @@ group :doc do
 end
 
 group :development, :test do
-  gem 'rspec-rails', '~> 2.0'
-  gem 'pry-byebug'
+  gem 'rspec-rails', '~> 3.1.0'
   gem 'dotenv-rails'
 end
 
