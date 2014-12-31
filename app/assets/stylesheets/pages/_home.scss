@@ -416,7 +416,7 @@
       }
 
       &.gopago{
-        background-image: image-url('featured-projects/gopago.jpg');
+        @include retina-image('featured-projects/gopago', 100% 100%, $extension: jpg, $asset-pipeline: true);
       }
 
       &.creeklife{
@@ -424,11 +424,11 @@
       }
 
       &.bike2020{
-        background-image: image-url('featured-projects/bike2020_mobile.jpg')
+        @include retina-image('featured-projects/bike2020_mobile', 100% 100%, $extension: jpg, $asset-pipeline: true);
       }
 
       &.bizlink{
-        background-image: image-url('featured-projects/bizlink_desktop.jpg')
+        @include retina-image('featured-projects/bizlink_desktop', 100% 100%, $extension: jpg, $asset-pipeline: true);
       }
     }
   }
