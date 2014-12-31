@@ -1,4 +1,4 @@
-AclWebsite::Application.routes.draw do
+Rails.application.routes.draw do
 
   get '/contact' => 'high_voltage/pages#show', id: 'contact', as: :contact
 
