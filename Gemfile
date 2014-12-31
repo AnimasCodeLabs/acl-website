@@ -30,7 +30,6 @@ gem 'high_voltage'
 gem 'bourbon'
 gem 'neat'
 gem 'metamagic'
-gem 'validates_email_format_of'
 gem 'flutie'
 gem 'bower'
 
@@ -41,22 +40,12 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
-  gem 'factory_girl_rails'
   gem 'pry-byebug'
   gem 'dotenv-rails'
 end
 
 group :test do
   gem 'capybara'
-  gem 'capybara-webkit'
-  gem 'shoulda-matchers'
-  gem 'database_cleaner'
-  gem 'email_spec'
-end
-
-group :development do
-  gem "mail_view", "~> 1.0.3"
-  gem "letter_opener"
 end
 
 gem 'thin'
