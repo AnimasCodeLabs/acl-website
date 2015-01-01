@@ -45,6 +45,7 @@
     .hackfest-banner {
       background-image: image-url("main-banners/hackfest.jpg");
       background-position: 50% 42%;
+      display: none;
 
       .gradient{
         @include linear-gradient(to left, rgba(#000000,0), rgba(#000000,1));
@@ -143,7 +144,6 @@
     .acl-gocode-banner {
       background-image: image-url("main-banners/acl-gocode.jpg");
       background-position: 50% 50%;
-      display: none;
 
       .gradient{
         background-color: rgb(237, 93, 54);
