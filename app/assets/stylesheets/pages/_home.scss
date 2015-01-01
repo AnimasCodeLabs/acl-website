@@ -421,8 +421,8 @@
         @include retina-image('featured-projects/gopago', 100% 100%, $extension: jpg, $asset-pipeline: true);
       }
 
-      &.creeklife{
-        background-image: image-url('featured-projects/creek_life.jpg')
+      &.recognized{
+        @include retina-image('featured-projects/recognized', 100% 100%, $extension: jpg, $asset-pipeline: true);
       }
 
       &.bike2020{
