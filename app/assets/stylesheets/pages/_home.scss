@@ -27,13 +27,18 @@
     .banner-picture{
       background-repeat: no-repeat;
       position: relative;
-      background-size: 100%;
-      background-position: auto;
+      background-size: cover;
 
       &:after{
         padding-top: percentage(650/1280);
         display:  block;
         content: '';
+      }
+
+      @include media($break-small-medium ){
+        &:after{
+          padding-top: percentage(1000/1280);
+        }
       }
     }
 
@@ -135,98 +140,95 @@
       }
     }
 
-    // .acl-gocode-banner {
-    //   background-image: image-url("main-banners/acl-gocode.jpg");
-    //   padding-top: 25%;
-    //
-    //
-    //
-    //   .gradient{
-    //     background-color: rgb(237, 93, 54);
-    //     opacity: .5;
-    //     position: absolute;
-    //     top: 0;
-    //     bottom: 0;
-    //     left: 0;
-    //     right: 0;
-    //   }
-    //
-    //   //vertical centered text on banner from css-tricks
-    //   &:before{
-    //     content: '';
-    //     display: inline-block;
-    //     height: 100%;
-    //   }
-    //
-    //   .banner-text{
-    //     display: table;
-    //     position: relative;
-    //     font-size: 20px;
-    //     margin-right: auto;
-    //     margin-left: auto;
-    //     padding-bottom: 0px;
-    //
-    //     .text{
-    //       display: table-cell;
-    //       vertical-align: middle;
-    //
-    //       @include media($break-large-xlarge) {
-    //         font-size: 14px;
-    //       }
-    //
-    //       @include media($break-large) {
-    //         font-size: 13px;
-    //       }
-    //
-    //       @include media($break-large-medium)  {
-    //         font-size: 12px;
-    //       }
-    //
-    //       @include media($break-medium)  {
-    //         font-size: 11px;
-    //       }
-    //
-    //       @include media($break-medium-small)  {
-    //         font-size: 10px;
-    //       }
-    //
-    //       @include media($break-small)  {
-    //         font-size: 6px;
-    //       }
-    //     }
-    //
-    //     .bracket{
-    //       display: table-cell;
-    //       font-size: 200px;
-    //       vertical-align: middle;
-    //
-    //       @include media($break-large-xlarge) {
-    //         font-size: 100px;
-    //       }
-    //
-    //       @include media($break-large) {
-    //         font-size: 140px;
-    //       }
-    //
-    //       @include media($break-large-medium)  {
-    //         font-size: 130px;
-    //       }
-    //
-    //       @include media($break-medium)  {
-    //         font-size: 110px;
-    //       }
-    //
-    //       @include media($break-medium-small)  {
-    //         font-size: 90px;
-    //       }
-    //
-    //       @include media($break-small)  {
-    //         font-size: 40px;
-    //       }
-    //
-    //     }
-    //   }
-    // }
+    .acl-gocode-banner {
+      background-image: image-url("main-banners/acl-gocode.jpg");
+      background-position: 50% 50%;
+      display: none;
+
+      .gradient{
+        background-color: rgb(237, 93, 54);
+        opacity: .5;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+
+      .banner-text-wrapper{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 10%;
+        text-align: center;
+
+      }
+
+      .banner-text{
+        display: inline-table;
+        font-size: 20px;
+
+        .text{
+          display: table-cell;
+          vertical-align: middle;
+
+          @include media($break-large-xlarge) {
+            font-size: 14px;
+          }
+
+          @include media($break-large) {
+            font-size: 13px;
+          }
+
+          @include media($break-large-medium)  {
+            font-size: 12px;
+          }
+
+          @include media($break-medium)  {
+            font-size: 11px;
+          }
+
+          @include media($break-medium-small)  {
+            font-size: 10px;
+          }
+
+          @include media($break-small)  {
+            font-size: 6px;
+          }
+        }
+
+        .bracket{
+          display: table-cell;
+          font-size: 200px;
+          vertical-align: middle;
+
+          @include media($break-large-xlarge) {
+            font-size: 100px;
+          }
+
+          @include media($break-large) {
+            font-size: 140px;
+          }
+
+          @include media($break-large-medium)  {
+            font-size: 130px;
+          }
+
+          @include media($break-medium)  {
+            font-size: 110px;
+          }
+
+          @include media($break-medium-small)  {
+            font-size: 90px;
+          }
+
+          @include media($break-small)  {
+            font-size: 40px;
+          }
+
+        }
+      }
+    }
   }
 
   .about-us {

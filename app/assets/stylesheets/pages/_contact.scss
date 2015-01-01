@@ -5,8 +5,8 @@
     .banner-picture{
       background-repeat: no-repeat;
       position: relative;
-      background-size: 132%;
-      background-position: auto;
+      background-size: cover;
+      background-position: 50% 50%;
       vertical-align: middle;
 
       &:after{
@@ -14,9 +14,15 @@
         display:  block;
         content: '';
       }
+
+      @include media($break-small-medium){
+        &:after{
+          padding-top: percentage(800/1280);
+        }
+      }
     }
 
-    .hackfest-banner {
+    .contact-banner {
       background-image: image-url("contact-banner.jpg");
       background-position: 50% 42%;
 
