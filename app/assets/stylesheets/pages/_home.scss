@@ -237,7 +237,7 @@
     }
 
     .sneffels-banner{
-      background-image: image-url("main-banners/sneffels.jpg");
+      @include retina-image('main-banners/sneffels', cover, $extension: jpg, $asset-pipeline: true);
       background-position: 11% 0;
 
       .banner-text-wrapper  {
