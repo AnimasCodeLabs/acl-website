@@ -28,11 +28,16 @@
       background-repeat: no-repeat;
       position: relative;
       background-size: cover;
+      height: 600px;
 
-      &:after{
-        padding-top: percentage(650/1280);
-        display:  block;
-        content: '';
+      @include media($break-large-xlarge){
+        height: auto;
+
+        &:after{
+          padding-top: percentage(650/1280);
+          display:  block;
+          content: '';
+        }
       }
 
       @include media($break-small-medium ){
@@ -144,6 +149,7 @@
     .acl-gocode-banner {
       background-image: image-url("main-banners/acl-gocode.jpg");
       background-position: 50% 50%;
+      display: none;
 
       .gradient{
         background-color: rgb(237, 93, 54);
@@ -226,6 +232,76 @@
             font-size: 40px;
           }
 
+        }
+      }
+    }
+
+    .sneffels-banner{
+      background-image: image-url("main-banners/sneffels.jpg");
+      background-position: 11% 0;
+
+      .banner-text-wrapper  {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 30px;
+
+        //vertical centered text on banner from css-tricks
+        &:before{
+          content: '';
+          display: inline-block;
+          height: 100%;
+          vertical-align: middle;
+          margin-right: -0.25em;
+        }
+      }
+
+      .banner-text{
+        display: inline-table;
+        vertical-align: middle;
+        position: relative;
+        z-index: 50;
+        font-size: 20px;
+
+        .text{
+          display: table-cell;
+          vertical-align: middle;
+        }
+
+        .bracket{
+          display: table-cell;
+          font-size: 200px;
+          vertical-align: middle;
+        }
+
+        @include media($break-large-xlarge){
+          .text{ font-size: 18px; }
+          .bracket{ font-size: 190px; }
+        }
+
+        @include media($break-large){
+          .text{ font-size: 16px; }
+          .bracket{ font-size: 175px; }
+        }
+
+        @include media($break-large-medium){
+          .text{ font-size: 14px; }
+          .bracket{ font-size: 160px; }
+        }
+
+        @include media($break-medium){
+          .text{ font-size: 12px; }
+          .bracket{ font-size: 130px; }
+        }
+
+        @include media($break-medium-small){
+          .text{ font-size: 10px; }
+          .bracket{ font-size: 110px; }
+        }
+
+        @include media($break-small){
+          .text{ font-size: 8px; }
+          .bracket{ font-size: 90px; }
         }
       }
     }
