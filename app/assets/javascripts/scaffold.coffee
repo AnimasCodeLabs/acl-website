@@ -4,3 +4,6 @@
     $('#site-nav').toggleClass("active")
     false
   )
+
+  $('.pages-home .featured-projects .project').on "click", ->
+    false #Prevent clicks
