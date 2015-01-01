@@ -15,11 +15,12 @@
   </head>
   <body class="<%= body_class %>">
     <header id="site-header">
-      <div class="logo">
-        <%= link_to root_path do %>
-          <h1>Animas Code Labs</h1>
-        <% end %>
-      </div>
+
+      <%= link_to root_path, class: "logo" do %>
+        <h1>Animas Code Labs</h1>
+      <% end %>
+
+
       <a class="mobile-nav-toggle icon-mobile-menu"></a>
       <nav id="site-nav">
         <ul>

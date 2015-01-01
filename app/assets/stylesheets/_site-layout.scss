@@ -7,6 +7,7 @@
     @include retina-image(header-logo, 150px 51px, $asset-pipeline: true);
     @include size(150px 51px);
 
+    display: block;
     float: none;
     margin: ((100px - 51px)/2) 0;
   }
