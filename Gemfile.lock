@@ -63,6 +63,8 @@ GEM
     eventmachine (1.0.4)
     execjs (2.2.2)
     flutie (2.0.0)
+    font_assets (0.1.11)
+      rack
     globalid (0.3.0)
       activesupport (>= 4.1.0)
     high_voltage (2.2.1)
@@ -183,6 +185,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   dotenv-rails
   flutie
+  font_assets
   high_voltage
   jquery-rails
   metamagic
