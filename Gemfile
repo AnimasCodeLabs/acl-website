@@ -30,6 +30,7 @@ gem 'bourbon'
 gem 'neat'
 gem 'metamagic'
 gem 'flutie'
+gem 'font_assets'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

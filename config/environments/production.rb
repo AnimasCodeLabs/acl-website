@@ -65,6 +65,9 @@ Rails.application.configure do
   # Tell browser to cache assets for one year
   config.static_cache_control = "public, max-age=31536000"
 
+  # Allow custom fonts to be served to any origin
+  config.font_assets.origin = '*'
+
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
