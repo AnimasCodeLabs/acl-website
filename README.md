@@ -19,3 +19,7 @@ $ rake
 You can set the following environment variables
 
     GA_TRACKING_ID=<Google analytics tracking id>
+
+## License
+
+This site is copyright Animas Code Labs 2013-2015. All Rights Reserved. Photos are licensed use of Animas Code Labs only.
