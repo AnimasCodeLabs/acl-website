@@ -1,7 +1,7 @@
 <% content_for(:extra_body_classes, 'pages-contact') %>
 
 <% meta title: 'Contact Us | Animas Code Labs',
-description: "Hire Animas Code Labs as your web and mobile app developer" %>
+  description: "Hire Animas Code Labs as your web and mobile app developer" %>
 
 <section class="banner">
   <div class="contact-banner banner-picture">
@@ -14,77 +14,52 @@ description: "Hire Animas Code Labs as your web and mobile app developer" %>
   </div>
 </section>
 
-<section class="outer-container">
-  <section class="conversation">
-    <div class="conversation-text">
-      <article>
-        <h2>Let's begin the conversation</h2>
-        <p>Whether you've got an idea for a new project, or just want to say hi, we'd love to hear from you. Please drop us a line in
-          the form below, and we'll get back to you shortly.</p>
-      </article>
-      <aside>
-        <section class="email-phone-address">
-          <div class="email">
-            <i class="icon-mail"></i>
-              <%= mail_to "info@animascodelabs.com" %>
-          </div>
-          <div class="phone">
-            <i class="icon-phone"></i>
-              <%= link_to "970-403-5085", "tel:1-970-403-5085" %>
-          </div>
-          <div class="address">
-            <i class="icon-location"></i>
-              <address>367 Valley View Drive<br>
-              Bayfield, CO 81122</address>
-          </div>
-        </section>
-      </aside>
+<section class="page-body">
+  <h2>Let's begin the conversation</h2>
+  <div class="send-message">
+    <div class="contact-text">
+      <p>Whether you've got an idea for a new project, or just want to say hi, we'd love to hear from you.</p>
     </div>
-  </section>
+    <form id="contact-form" accept-charset="UTF-8" action="https://formkeep.com/f/106ae1197627" method="POST" novalidate>
+      <input type="hidden" name="utf8" value="✓">
+      <div class="grid">
+        <div class="field">
+          <input id="first-name" type="text" placeholder="First Name" name="first_name"/>
+        </div>
+        <div class="field">
+          <input id="last-name" type="text" placeholder="Last Name" name="last_name"/>
+        </div>
+        <div class="field">
+          <input type="email" placeholder="Email" name="email"/>
+        </div>
+        <div class="field">
+          <input type="tel" placeholder="Phone" name="phone"/>
+        </div>
+      </div>
+      <div class="message">
+        <textarea placeholder="Tell us about your project or just drop us a line." rows="9" name="message"></textarea>
+      </div>
+      <button type="submit">LET'S GET STARTED</button>
+    </form>
+  </div>
 
-  <section class="contact-form">
-      <form id="contact-form" accept-charset="UTF-8" action="https://formkeep.com/f/106ae1197627" method="POST" novalidate>
-        <input type="hidden" name="utf8" value="✓">
-        <div class="grid">
-          <div class="field">
-            <input id="first-name" type="text" placeholder="First Name" name="first_name"/>
-          </div>
-          <div class="field">
-            <input id="last-name" type="text" placeholder="Last Name" name="last_name"/>
-          </div>
-          <div class="field">
-            <input type="email" placeholder="Email" name="email"/>
-          </div>
-          <div class="field">
-            <input type="tel" placeholder="Phone" name="phone"/>
-          </div>
-        </div>
-        <div class="message">
-          <textarea placeholder="Tell us about your project or just drop us a line." rows="9" name="message"></textarea>
-        </div>
-        <br>
-        <div class="button">
-          <button type="submit">LET'S GET STARTED</button>
-        </div>
-      </form>
-  </section>
+  <aside class="contact-methods">
+    <div class="email">
+      <i class="icon-mail"></i>
+      <%= mail_to "info@animascodelabs.com" %>
+    </div>
+    <div class="phone">
+      <i class="icon-phone"></i>
+      <%= link_to "970-403-5085", "tel:1-970-403-5085" %>
+    </div>
+    <div class="address">
+      <i class="icon-location"></i>
+      <address>367 Valley View Drive<br>
+        Bayfield, CO 81122</address>
+    </div>
+  </aside>
 </section>
 
-<section class="email-phone-address-bottom">
-  <div class="email">
-    <i class="icon-mail"></i>
-    <%= mail_to "info@animascodelabs.com" %>
-  </div>
-  <div class="phone">
-    <i class="icon-phone"></i>
-    <%= link_to "970-403-5085", "tel:1-970-403-5085" %>
-  </div>
-  <div class="address">
-    <i class="icon-location"></i>
-    <address>367 Valley View Drive<br>
-      Bayfield, CO 81122</address>
-    </div>
-  </section>
 
 <section class="building-great-apps">
   <h3>Building Great Applications at 6512' Elevation.</h3>
