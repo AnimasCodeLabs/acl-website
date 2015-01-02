@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
+//= require jquery.form
+//= require jquery.validate
 //= require Placeholders.min
 //= require_tree .
