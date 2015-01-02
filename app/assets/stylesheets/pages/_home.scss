@@ -240,6 +240,14 @@
       @include retina-image('main-banners/sneffels', cover, $extension: jpg, $asset-pipeline: true);
       background-position: 11% 0;
 
+      @include media($break-large-medium){
+        @include retina-image('main-banners/sneffels-tablet', cover, $extension: jpg, $asset-pipeline: true);
+      }
+
+      @include media($break-small){
+        @include retina-image('main-banners/sneffels-mobile', cover, $extension: jpg, $asset-pipeline: true);
+      }
+
       .banner-text-wrapper  {
         position: absolute;
         top: 0;
