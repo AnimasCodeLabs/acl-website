@@ -19,6 +19,7 @@ $ rake
 You can set the following environment variables
 
     GA_TRACKING_ID=<Google analytics tracking id>
+    ASSET_HOST=<The url to the asset host for this application>
 
 ## License
 
